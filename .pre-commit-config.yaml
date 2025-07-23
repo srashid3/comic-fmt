@@ -1,0 +1,22 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: trailing-whitespace
+    name: Remove Whitespace
+  - id: end-of-file-fixer
+    name: Fix EOF
+  - id: name-tests-test
+    name: Validate Test Names
+  - id: check-added-large-files
+    name: Check for Large Files
+- repo: https://github.com/PyCQA/flake8
+  rev: 7.1.1
+  hooks:
+  - id: flake8
+    name: Run Linter
+- repo: https://github.com/srashid3/pre-commit-hooks
+  rev: v1.0.0
+  hooks:
+  - id: pytest
+    args: [--cov=lib, --cov-fail-under=80]
